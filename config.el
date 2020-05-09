@@ -19,7 +19,7 @@
 ;;
 ;; They all accept either a font-spec, font string ("Input Mono-12"), or xlfd
 ;; font string. You generally only need these two:
-(setq doom-font (font-spec :family "monospace" :size 9))
+(setq doom-font (font-spec :family "monospace" :size 10))
 
 ;; There are two ways to load a theme. Both assume the theme is installed and
 ;; available. You can either set `doom-theme' or manually load a theme with the
@@ -52,10 +52,6 @@
 ;; You can also try 'gd' (or 'C-c g d') to jump to their definition and see how
 ;; they are implemented.
 
-;; Configure Rust-Analyzer: https://github.com/hlissner/doom-emacs/issues/2195#issuecomment-565895068
-(after! lsp-rust
-  (setq lsp-rust-server 'rust-analyzer))
-
-;; Rustfmt on save hook: https://github.com/hlissner/doom-emacs/issues/2045#issuecomment-552240980
 (after! rustic
-  (setq rustic-format-on-save t))
+  (setq rustic-format-on-save t)
+  (setq rustic-lsp-server 'rust-analyzer))
