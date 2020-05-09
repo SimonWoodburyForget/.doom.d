@@ -53,5 +53,6 @@
 ;; they are implemented.
 
 (after! rustic
-  (setq rustic-format-on-save t)
-  (setq rustic-lsp-server 'rust-analyzer))
+  (setq
+   rustic-format-on-save t
+   rustic-lsp-server 'rust-analyzer))
