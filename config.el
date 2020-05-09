@@ -55,3 +55,7 @@
 ;; Configure Rust-Analyzer: https://github.com/hlissner/doom-emacs/issues/2195#issuecomment-565895068
 (after! lsp-rust
   (setq lsp-rust-server 'rust-analyzer))
+
+;; Rustfmt on save hook: https://github.com/hlissner/doom-emacs/issues/2045#issuecomment-552240980
+(after! rustic
+  (setq rustic-format-on-save t))
